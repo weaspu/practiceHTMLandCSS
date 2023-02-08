@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My Final Site Layout</title>
+ <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+ <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
+<title>User Asign</title>
+
+</head>
+<style>
+    .fieldset {
+        border:solid black; 
+        width: 800px; 
+        margin-left: 200px; 
+        height: auto; 
+        background-color: rgb(246, 244, 244);
+        display:inline-block;
+        
+    }
+    input,label {
+    margin: 0.05rem 0;
+}
+
+</style>
+
+<body>
+    <h1><center><u> Student Profile Form </u></center></h1>
+    <fieldset class="fieldset">
+    <!-- <select class="form-select form-select-sm " aria-label="Faculty">  -->
+        &emsp;&emsp;<label for="Faculty" class="faculty">Faculty:
+        <select name="faculty">
+             <option selected>Select Faculty</option>
+            <option value="1">Education</option>
+            <option value="2">Management</option>
+            <option value="3">Science</option>
+        </select> </label>&emsp;&emsp;&emsp;&emsp;
+    
+    <!-- <select class="form-select form-select-sm" aria-label="Level">  -->
+        <label for="Level">Level:</label>
+            <select name="level">
+            <option selected>Select Level</option>
+            <option value="1">Plus 2</option>
+            <option value="2">Bachelor's Degree</option>
+            <option value="3">Master's Degree</option>
+        </select>&emsp;&emsp;&emsp;&emsp;
+    
+    <!-- <select class="form-select form-select-sm" aria-label="Class">  -->
+        <label for="class">Class:</label>
+        <select name="class">
+            <option selected class >Select Class</option>
+            <option value="1">BBS 2079</option>
+            <option value="2">BBS 2078</option>
+            <option value="3">BBS 2077</option>
+        </select>&emsp;&emsp;&emsp;&emsp;
+        <br>
+        <br>
+    <!-- <select class="form-select form-select-sm" aria-label="Shift">  -->
+        &emsp;&emsp;<label for="shift">Shift:</label>
+        <select name="shift">
+            <option selected>Select Shift</option>
+            <option value="1">Morning</option>
+            <option value="2">Day</option>
+            <option value="3">Evening</option>
+        </select>&emsp;&emsp;&emsp;&emsp;
+
+    <!-- <select class="form-select form-select-sm" aria-label="Medium">  -->
+        &emsp;<label for="Medium">Medium :</label>
+        <select name="medium">
+            <option selected>Select Medium</option>
+            <option value="1">English </option>
+            <option value="2">Nepali</option>
+        </select>&emsp;&emsp;&emsp;&emsp;
+
+    <!-- <select class="form-select form-select-sm" aria-label="Medium">  -->
+        &emsp;<label for="section">Section :</label>
+        <select name="section">
+            <option selected>Select Section</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+
+        </select>
+        <br> <br>
+        <fieldset class="personaldetails">
+        <legend>Personal Details</legend>
+        <div class="input-group mb-3">
+            <label for="studentname">Name : </label>&emsp;
+            <input type="text" required class="form-control" placeholder="Enter student's name" aria-label="Recipient's username">
+            &emsp;
+            <label for="studentnamedevanagarik">नाम थर : </label>&emsp;
+            <input type="text" class="form-control" placeholder="देवनागरीमा नाम थर लेख्नुहाेस ।" aria-label="Recipient's username">&emsp;&emsp;
+            <label for="rollno">Roll No. : </label>&emsp;
+            <input type="number" required placeholder="Enter Roll No." style="width: 100px">
+        </div>
+        
+        <div class="input" >
+            <br>
+            <label for="dob_bs">Date of Birth. : </label>&emsp;
+            <input type="text"   placeholder="DOB(B.S.) Year/Month/Day"  >
+            &emsp;
+            <label for="dob_ad">Date of Birth in A.D.</A> : </label>&emsp;
+            <input type="date"  required pattern="\d{4}-\d{2}-\d{2}"  placeholder="DOB(A.D.) Month/Day/Year" >
+        </div>
+        <br>
+
+        <!-- <select class="form-select form-select-sm" aria-label="Medium">  -->
+        <label for="religion">Religion:</label>
+        <select name="section">
+            <option selected>Select Religion</option>
+            <option value="1">HINDU</option>
+            <option value="2">BUDDHIST</option>
+            <option value="3">MUSLIM</option>
+            <option value="4">CHIRISTAN</option>
+
+        </select>
+         
+        <!-- <select class="form-select form-select-sm" aria-label="Medium">  -->
+        &emsp; <label for="cast_or_ethnicity">Cast/Ethnicity:</label>
+        <select name="section">
+            <option selected>Select Cast/Ethnicity</option>
+            <option value="1">BRAHMAN/KSHETRI</option>
+            <option value="2">JANJATI</option>
+            <option value="3">DALIT</option>
+            <option value="4">MADHESHI</option>
+
+        </select>
+            
+        <!-- <select class="form-select form-select-sm" aria-label="Medium">  -->
+        &emsp; <label for="nationality">Select Nationality:</label>
+        <select name="section">
+            <option selected>Nationality</option>
+            <option value="1">Nepali</option>
+            <option value="2">Indian</option>
+            <option value="3">PAKISTHANI</option>
+        </select>
+        </fieldset>
+        <br> <br>
+        <fieldset class="gardiandetails">
+            <legend>Guardian Details</legend>
+        <div class="input-group mb-3">
+            <label for="fathername">Father's Name : </label>
+            <input type="text" class="form-control" placeholder="Enter father's name" aria-label="Recipient's username">&emsp;
+            <label for="fatheroccupation">Occupation : </label>
+            <select name="section">
+                <option selected>Select Occupation</option>
+                <option value="1">Farming</option>
+                <option value="2">Teaching</option>
+                <option value="3">Business</option>
+            </select>&emsp;
+            <label for="fathermobileno">Mobile No. : </label>
+            <input type="tel" placeholder="Mother's mobile no" maxlength="10" style="width: 120px">
+        </div><br>
+
+        <div>
+        
+            <label for="mothername">Mother's Name : </label>
+            <input type="text" class="form-control" placeholder="Enter Mother's Name" aria-label="Recipient's username">&emsp;
+            <label for="motheroccupation">Occupation : </label>
+            <select name="section">
+                <option selected>Select Occupation</option>
+                <option value="1">Farming</option>
+                <option value="2">Teaching</option>
+                <option value="3">Business</option>
+            </select>
+
+            &emsp; <label for="mothermobileno">Mobile No. : </label>
+            <input type="tel" placeholder="Mother's mobile no" maxlength="10" style="width: 120px">
+        </div>
+
+        <br>
+        <div>
+            <label for="Guardianname">Guardian's Name : </label>
+            <input type="text" class="form-control" placeholder="Guardian Name" aria-label="Recipient's username">&emsp;
+         
+            <label for="Guardianoccupation">Occupation : </label>
+            <select name="section">
+                <option selected>Select Occupation</option>
+                <option value="1">Farming</option>
+                <option value="2">Teaching</option>
+                <option value="3">Business</option>
+            </select>&emsp;
+            
+            <label for="Guardianmobileno">Mobile No. : </label>
+            <input type="tel"   placeholder="Guardian mobile no" maxlength="10" style="width: 120px">
+        </div>
+        </fieldset>
+        <br>
+        <fieldset>
+        <legend>Permanent Address</legend>  
+        <div>
+            <label for="permanentprovicne">Province : </label>
+            <select name="section">
+                <option selected>Select Province</option>
+                <option value="1">Province No. 1 </option>
+                <option value="2">Madhesh Province</option>
+                <option value="3">Bagmati Province</option>
+                <option value="4">Gandaki Province</option>
+                <option value="5">Lumbani Province</option>
+                <option value="6">Karnali Province</option>
+                <option value="7">Sudoorpashchim Province</option>
+            </select>
+            &emsp;
+            <label for="permanentdistrict">District : </label>
+            <select name="section">
+                <option selected>Select District</option>
+                <option value="1">Taplejung</option>
+                <option value="2">Panchthar</option>
+                <option value="3">Ilam</option>
+                <option value="4">Jhapa</option>
+                <option value="5">Morang</option>
+                <option value="6">Sunsari</option>
+                <option value="7">Dhankuta</option>
+            </select>
+            &emsp;
+            
+
+            <label for="permanentlocallevel">Local Level : </label>
+            <select name="section">
+                <option selected>Select Local Level</option>
+                <option value="1">Bharatpur</option>
+                <option value="2">Kathmandu</option>
+                <option value="3">Lalitpur</option>
+                <option value="4">Damak</option>
+                <option value="5">Dhangadi</option>
+                
+            </select>
+            <br><br>
+
+            <label for="permanentwardno">Ward No.: </label>
+            <select name="section">
+                <option selected>Select Ward No. </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                
+            </select>&emsp;
+            <label for="tol">Tol Name : </label>
+            <input type="text"  placeholder="Enter Tol Name" >&emsp;
+            <label for="street">Street Name : </label>
+            <input type="text"  placeholder="Enter Street Name">
+
+            </div>
+            </fieldset>
+            <br>
+            <fieldset>
+            <legend>Temporary Address</legend>  
+            <div>
+                <label for="temporaryprovicne">Province : </label>
+                <select name="section">
+                    <option selected>Select Province</option>
+                    <option value="1">Province No. 1 </option>
+                    <option value="2">Madhesh Province</option>
+                    <option value="3">Bagmati Province</option>
+                    <option value="4">Gandaki Province</option>
+                    <option value="5">Lumbani Province</option>
+                    <option value="6">Karnali Province</option>
+                    <option value="7">Sudoorpashchim Province</option>
+                </select>
+                &emsp;
+                <label for="temporarydistrict">District : </label>
+                <select name="section">
+                    <option selected>Select District</option>
+                    <option value="1">Taplejung</option>
+                    <option value="2">Panchthar</option>
+                    <option value="3">Ilam</option>
+                    <option value="4">Jhapa</option>
+                    <option value="5">Morang</option>
+                    <option value="6">Sunsari</option>
+                    <option value="7">Dhankuta</option>
+                </select>&emsp;
+                
+
+    
+                <label for="temporarylocallevel">Local Level : </label>
+                <select name="section">
+                    <option selected>Select Local Level</option>
+                    <option value="1">Bharatpur</option>
+                    <option value="2">Kathmandu</option>
+                    <option value="3">Lalitpur</option>
+                    <option value="4">Damak</option>
+                    <option value="5">Dhangadi</option>
+                    
+                </select><br><br>
+                <label for="temporarywardno">Ward No.: </label>
+                <select name="section">
+                    <option selected>Select Ward No. </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    
+                </select>&emsp;
+                <label for="tol">Tol Name : </label>
+            <input type="text"  placeholder="Enter Tol Name" >&emsp;
+            <label for="street">Street Name : </label>
+            <input type="text"  placeholder="Enter Street Name">
+
+                </div>
+                </fieldset> 
+                <br><br>
+                <fieldset>
+            <legend>Communication and Social Network</legend>  
+            <div class="input-group mb-3">
+                <label for="email">Email: </label>&emsp;
+                <input type="email" class="form-control" placeholder="Email Address" aria-label="Recipient's username">&emsp;&emsp;
+                <label for="phone">Mobile Number: </label>
+                <input type="tel" id="phone"  maxlength="10">
+            </div><br>
+            <div>
+                <label for="Social Network">Social Network: </label>
+                <select name="section">
+                    <option selected>Social Sites</option>
+                    <option value="1">Facebook</option>
+                    <option value="2">Twiter</option>
+                    <option value="3">Github</option>
+                    <option value="4">linkdin</option>
+                    <option value="5">TikTok</option>
+                </select>
+                <input type="url"  placeholder="Virtual Address (URL)" aria-label="Recipient's username">
+            
+            </fieldset>
+            <div>
+                <input type="submit" value="Submit" style="margin:5px 400px; padding:0" size="10" /></div> 
+
+    </fieldset>
+  
+    
+</body>
+
+</html>
